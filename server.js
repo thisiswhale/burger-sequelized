@@ -24,7 +24,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Static directory
 app.use(express.static(process.cwd() +"/public"));
-
+app.use(methodOverride("_method"));
 var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout:"main"}));

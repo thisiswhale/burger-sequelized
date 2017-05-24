@@ -5,6 +5,7 @@ var db = require("../models");
 
 //get the default site
 router.get("/", function(req, res) {
+    console.log("get is called");
   db.Burger.findAll({}).then(function(data) {
     var hbsObject = {
       burgers: data
@@ -17,6 +18,7 @@ router.get("/", function(req, res) {
 });
 
 router.post("/", function(req, res) {
+  console.log("post is called");
   db.Burger.create({
     burger_name: req.body.burger_name,
     devoured: false
@@ -26,9 +28,9 @@ router.post("/", function(req, res) {
 });
 
 router.put("/:id", function(req, res) {
-  console.log("hey");
+    console.log("put is called");
   db.Burger.update({
-    devoured: true
+    devoured: req.body.devoured
   }, {
     where: {
       id: req.params.id
