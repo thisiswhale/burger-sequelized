@@ -1,7 +1,7 @@
 # Burger Logger Sequelized, the next act
 
 ## Overview
-The Sequelize version of "Burger Logger"
+The Sequelize version of [Burger Logger](https://github.com/thisiswhale/burger)
 
 ---
 Programs used:
@@ -12,4 +12,4 @@ Programs used:
 * Sequelize
 
 ---
-Deployed on [Heroku](https://ancient-temple-97006.herokuapp.com/)
+Deployed on [Heroku](https://burger-sequelized-whale.herokuapp.com/)
